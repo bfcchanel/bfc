@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -ex
+
+# Fetch all commits/refs needed to run our tests.
+git fetch origin master:master v2.0.0:v2.0.0 test/attributes:test/attributes test/master:test/master
+
+npm install
+bower install
